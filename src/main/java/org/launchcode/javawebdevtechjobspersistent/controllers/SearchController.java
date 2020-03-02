@@ -35,9 +35,9 @@ public class SearchController {
             jobs = jobRepository.findAll();
         } else {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm, jobRepository.findAll());
-            System.out.println(searchType);
-            System.out.println(searchTerm);
-            System.out.println(jobRepository.findAll());
+//            System.out.println(searchType);
+//            System.out.println(searchTerm);
+//            System.out.println(jobRepository.findAll());
         }
         model.addAttribute("columns", columnChoices);
         model.addAttribute("title", "Jobs with " + columnChoices.get(searchType) + ": " + searchTerm);
